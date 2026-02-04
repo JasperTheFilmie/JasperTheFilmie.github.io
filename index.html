@@ -1,73 +1,145 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Jasper Dewitt II | Portfolio</title>  
-    <style>  
-        :root {  
-            --bg: #0F172A;  
-            --accent: #F97316;   
-            --text: #F8FAFC;  
-        }  
-        body {  
-            background-color: var(--bg);  
-            color: var(--text);  
-            font-family: sans-serif;  
-            margin: 0;  
-            padding: 0;  
-            line-height: 1.6;  
-        }  
-        header {  
-            padding: 2rem;  
-            text-align: center;  
-            border-bottom: 1px solid #1E293B;  
-            letter-spacing: 2px;  
-        }  
-        .hero {  
-            padding: 80px 20px;  
-            text-align: center;  
-        }  
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }  
-        .accent { color: var(--accent); }  
-        .grid {  
-            display: grid;  
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  
-            gap: 20px;  
-            padding: 40px;  
-        }  
-        .card {  
-            background: #1E293B;  
-            padding: 25px;  
-            border-radius: 12px;  
-            border: 1px solid transparent;  
-            transition: 0.3s;  
-        }  
-        .card:hover { border-color: var(--accent); transform: translateY(-5px); }  
-        h3 { margin-top: 0; color: var(--accent); }  
-    </style>  
-</head>  
-<body>  
-    <header>  
-        <strong>JASPERTHEFILMIE</strong>  
-    </header>  
-    <section class="hero">  
-        <h1>Bridging <span class="accent">AI Tech</span> & Creative Storytelling</h1>  
-        <p>Digital Strategist | Educator | Filmmaker</p>  
-    </section>  
-    <div class="grid">  
-        <div class="card">  
-            <h3>AI-Driven Marketing</h3>  
-            <p>Showcasing data-backed growth strategies and automation workflows.</p>  
-        </div>  
-        <div class="card">  
-            <h3>Cinematography</h3>  
-            <p>Short-form storytelling, drone mapping, and professional video production.</p>  
-        </div>  
-        <div class="card">  
-            <h3>Business Tech</h3>  
-            <p>MSBT Candidate at the University of Miami | AI & Blockchain focus.</p>  
-        </div>  
-    </div>  
-</body>  
-</html>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasper Dewitt II | AI & Creative Strategist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #020617;
+            --accent: #F97316; /* Your brand orange */
+            --glass: rgba(30, 41, 59, 0.7);
+            --text: #F8FAFC;
+        }
+
+        * { transition: all 0.3s ease; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Entry Animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero {
+            padding: 120px 20px;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+        .accent { color: var(--accent); }
+
+        /* Video/Image Container */
+        .media-container {
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--accent);
+            box-shadow: 0 0 50px rgba(249, 115, 22, 0.2);
+        }
+
+        .media-container video, .media-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Glassmorphism Cards */
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(30, 41, 59, 0.9);
+        }
+
+        .card h3 { color: var(--accent); margin-top: 0; font-size: 1.5rem; }
+
+        .btn {
+            background: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn:hover { transform: scale(1.1); box-shadow: 0 0 20px var(--accent); }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="font-weight: 900; letter-spacing: 1px;">JASPERTHEFILMIE</div>
+        <nav>
+            <a href="#work" style="color: white; text-decoration: none; margin-left: 20px;">Work</a>
+            <a href="mailto:jasper.dewittii@gmail.com" class="btn" style="padding: 10px 20px; margin: 0 0 0 20px;">Hire Me</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Bridging <span class="accent">AI Tech</span> &<br>Creative Storytelling</h1>
+        <p style="font-size: 1.2rem; opacity: 0.8;">Digital Strategist | Educator | MSBT Candidate @ University of Miami</p>
+        
+        <div class="media-container" style="margin-top: 50px;">
+            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=1000" alt="Tech Hero Visual">
+        </div>
+    </section>
+
+    <div class="grid" id="work">
+        <div class="card">
+            <h3>AI Automation</h3>
+            <p>Implementing machine learning workflows to scale brand creativity and marketing operations.</p>
+        </div>
+        <div class="card">
+            <h3>Film & Drone</h3>
+            <p>High-end cinematography and Part 107 drone mapping for enterprise and lifestyle brands.</p>
+        </div>
+        <div class="card">
+            <h3>Strategy</h3>
+            <p>Data-backed digital marketing plans rooted in media communications and business tech.</p>
+        </div>
+    </div>
+
+</body>
+</html>
